@@ -1,0 +1,17 @@
+#!/bin/bash
+
+##Bootstrap script to install the necessary things and start the apache container.
+sudo yum -y update
+sudo yum -y install docker
+sudo usermod -aG docker ec2-user
+sudo service docker restart
+sudo chkconfig docker on
+sudo docker pull httpd
+
+
+# Start Apache container and listen on port 80
+sudo docker run \
+        -d \
+        -p 80:80 \
+        --name rohit-apache2 \
+        httpd
