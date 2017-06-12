@@ -14,8 +14,8 @@ Usage instructions:
 
 Command order to use:
 
-make plan
-make apply
+1. make plan
+2. make apply
 
 The apply command will present the public IP of the apache service , just enter the IP in browser to see pache default page.
 
